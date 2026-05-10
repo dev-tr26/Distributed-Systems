@@ -1,0 +1,12 @@
+begin process p1
+print abc
+send p2 m1
+recv p2 m2
+send p2 m3
+
+begin process p2
+recv p1 m1
+print xyz
+send p1 m2
+recv p1 m3
+end process
